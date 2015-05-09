@@ -1,6 +1,0 @@
-com\webdev\www\dao\IUserDao.class
-com\webdev\www\domain\User.class
-com\webdev\www\service\impl\UserService.class
-com\webdev\www\service\IUserService.class
-com\webdev\www\controller\UserController.class
-com\webdev\www\dao\impl\UserDao.class
