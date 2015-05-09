@@ -1,4 +1,4 @@
-package com.webdev.www.domain;
+package com.turtle.www.domain;
 
 import java.util.Date;
 

@@ -1,9 +1,9 @@
-package com.webdev.www.dao.impl;
+package com.turtle.www.dao.impl;
 
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 
-import com.webdev.www.dao.IUserDao;
-import com.webdev.www.domain.User;
+import com.turtle.www.dao.IUserDao;
+import com.turtle.www.domain.User;
 
 public class UserDao extends SqlSessionDaoSupport implements IUserDao {
 	public User getUserByName(User user) {

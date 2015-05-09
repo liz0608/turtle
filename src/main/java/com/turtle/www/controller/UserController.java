@@ -1,4 +1,4 @@
-package com.webdev.www.controller;
+package com.turtle.www.controller;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.webdev.www.domain.User;
-import com.webdev.www.service.IUserService;
+import com.turtle.www.domain.User;
+import com.turtle.www.service.IUserService;
 
 @Controller
 public class UserController {

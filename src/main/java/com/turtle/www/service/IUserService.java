@@ -1,6 +1,6 @@
-package com.webdev.www.service;
+package com.turtle.www.service;
 
-import com.webdev.www.domain.User;
+import com.turtle.www.domain.User;
 
 public interface IUserService {
 	public User getUserByName(User user);

@@ -1,6 +1,6 @@
-package com.webdev.www.dao;
+package com.turtle.www.dao;
 
-import com.webdev.www.domain.User;
+import com.turtle.www.domain.User;
 
 public interface IUserDao {
 	public User getUserByName(User user);

@@ -1,8 +1,8 @@
-package com.webdev.www.service.impl;
+package com.turtle.www.service.impl;
 
-import com.webdev.www.dao.IUserDao;
-import com.webdev.www.domain.User;
-import com.webdev.www.service.IUserService;
+import com.turtle.www.dao.IUserDao;
+import com.turtle.www.domain.User;
+import com.turtle.www.service.IUserService;
 
 public class UserService implements IUserService {
 	private IUserDao userDao;
