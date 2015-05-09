@@ -4,14 +4,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>登录页面</title>
-<script src="../js/jquery-1.11.0.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery-1.11.0.min.js"></script>
 <link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	href="${pageContext.request.contextPath}/css/bootstrap.min.css">
 <link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="../css/main.css" />
+	href="${pageContext.request.contextPath}/css/bootstrap-theme.min.css">
+<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="${ pageContext.request.contextPath}/css/main.css" />
 </head>
 <body>
 	<%@ include file="/common/header.jsp"%>

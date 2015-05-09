@@ -96,7 +96,7 @@ public class UserController {
 		return mav;
 	}
 	
-	@RequestMapping("/user/detail.do")
+	@RequestMapping("/user/detail.jsp")
 	protected ModelAndView UserDetail(
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {

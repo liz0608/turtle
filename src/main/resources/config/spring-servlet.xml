@@ -22,4 +22,19 @@
 			</bean>
 		</mvc:message-converters>
 	</mvc:annotation-driven>
+
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/*" />
+			<bean id="commonInterceptor" class="com.turtle.www.handler.CommonInterceptor">
+				<property name="urlIgnores">
+					<list>
+						<value>login.jsp</value>
+						<value>register.jsp</value>
+						<value>index.jsp</value>
+					</list>
+				</property>
+			</bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
 </beans>
