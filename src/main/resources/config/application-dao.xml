@@ -17,14 +17,14 @@
 	</bean>
 
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.webdev.www.dao.impl" />
+		<property name="basePackage" value="com.turtle.www.dao.impl" />
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
 	</bean>
 
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="mapperLocations" value="classpath*:config/mapper/*.xml" />
-		<property name="typeAliasesPackage" value="com.webdev.www.domain" />
+		<property name="typeAliasesPackage" value="com.turtle.www.domain" />
 	</bean>
 
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate"
@@ -32,7 +32,7 @@
 		<constructor-arg index="0" ref="sqlSessionFactory" />
 	</bean>
 
-	<bean id="userDao" class="com.webdev.www.dao.impl.UserDao">
+	<bean id="userDao" class="com.turtle.www.dao.impl.UserDao">
 		<property name="sqlSessionTemplate" ref="sqlSession" />
 	</bean>
 
