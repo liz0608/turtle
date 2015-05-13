@@ -11,7 +11,7 @@
 	href="${pageContext.request.contextPath}/css/bootstrap-theme.min.css">
 <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css"
-	href="${ pageContext.request.contextPath}/css/main.css" />
+	href="${pageContext.request.contextPath}/css/main.css" />
 </head>
 <body>
 	<%@ include file="/common/header.jsp"%>
