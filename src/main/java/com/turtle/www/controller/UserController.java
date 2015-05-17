@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.annotation.Resource;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,7 +19,9 @@ import com.turtle.www.domain.User;
 import com.turtle.www.service.IUserService;
 
 @Controller
+@RequestMapping("/user")
 public class UserController {
+	@Resource(name = "userService")
 	private IUserService userService;
 
 	public IUserService getUserService() {
@@ -29,7 +32,7 @@ public class UserController {
 		this.userService = userService;
 	}
 
-	@RequestMapping("/user/login.do")
+	@RequestMapping("/login.do")
 	protected @ResponseBody Map<String, Object> login(
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
@@ -57,18 +60,17 @@ public class UserController {
 		}
 		return result;
 	}
-	
-	@RequestMapping("/user/logout.do")
-	protected ModelAndView logout(
-			HttpServletRequest request, HttpServletResponse response)
-			throws Exception {
-		HttpSession session = request.getSession();	
+
+	@RequestMapping("/logout.do")
+	protected ModelAndView logout(HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		HttpSession session = request.getSession();
 		session.removeAttribute("user");
 		ModelAndView mav = new ModelAndView("redirect:/index.jsp");
 		return mav;
 	}
 
-	@RequestMapping("/user/register.do")
+	@RequestMapping("/register.do")
 	protected ModelAndView register(HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 		String username = request.getParameter("username");
@@ -95,13 +97,12 @@ public class UserController {
 		userService.insertUser(user);
 		return mav;
 	}
-	
-	@RequestMapping("/user/detail.jsp")
-	protected ModelAndView UserDetail(
-			HttpServletRequest request, HttpServletResponse response)
-			throws Exception {
-		HttpSession session = request.getSession();	
-		User user = (User)session.getAttribute("user");
+
+	@RequestMapping("/detail.jsp")
+	protected ModelAndView UserDetail(HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		HttpSession session = request.getSession();
+		User user = (User) session.getAttribute("user");
 		ModelAndView mav = new ModelAndView("/user/detail");
 		mav.addObject("user2", user);
 		return mav;

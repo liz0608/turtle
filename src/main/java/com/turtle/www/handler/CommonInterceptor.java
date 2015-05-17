@@ -32,10 +32,10 @@ public class CommonInterceptor implements HandlerInterceptor {
 
 		HttpSession session = request.getSession();
 		User user = (User) session.getAttribute("user");
-		if (user != null) {
+		if (user == null) {
 			return true;
 		}
-		
+
 		return false;
 	}
 
